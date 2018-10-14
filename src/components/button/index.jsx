@@ -1,10 +1,7 @@
 // @flow
 
 import React from "react";
-import styled from "styled-components";
 
-const Button = styled.button`
-  border: 2px solid red;
-`;
+const Button = () => <div>Button</div>;
 
 export default Button;

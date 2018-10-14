@@ -1,27 +1,25 @@
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
 const buttonStyles = {
-  border: '1px solid #eee',
+  border: "1px solid #eee",
   borderRadius: 3,
-  backgroundColor: '#FFFFFF',
-  cursor: 'pointer',
+  backgroundColor: "#FFFFFF",
+  cursor: "pointer",
   fontSize: 15,
-  padding: '3px 10px',
-  margin: 10,
+  padding: "3px 10px",
+  margin: 10
 };
 
 const Button = ({ children, onClick }) => (
-  <button
-    style={buttonStyles}
-    onClick={onClick}
-  >
+  <button style={buttonStyles} onClick={onClick}>
     {children}
   </button>
 );
 
 Button.propTypes = {
-  children: React.PropTypes.string.isRequired,
-  onClick: React.PropTypes.func,
+  children: PropTypes.string.isRequired,
+  onClick: PropTypes.func
 };
 
 export default Button;
