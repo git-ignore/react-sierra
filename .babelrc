@@ -7,10 +7,12 @@
         "targets": "> 2%, not dead"
       }
     ],
-    "@babel/preset-react",
-    "@babel/preset-flow"
+    "@babel/preset-flow",
+    "@babel/preset-react"
   ],
   "plugins": [
+    "@babel/plugin-syntax-flow",
+    "flow-react-proptypes",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-syntax-import-meta",
     "@babel/plugin-proposal-class-properties",
@@ -37,7 +39,6 @@
     "@babel/plugin-proposal-nullish-coalescing-operator",
     "@babel/plugin-proposal-do-expressions",
     "@babel/plugin-proposal-function-bind",
-    "babel-plugin-styled-components",
-    "flow-react-proptypes"
+    "babel-plugin-styled-components"
   ]
 }
