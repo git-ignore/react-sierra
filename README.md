@@ -1,6 +1,4 @@
-# Draft version of UI-library
-
-#### Library of react ui-components inspired by [Shards design](https://designrevision.com/demo/shards/)
+#### Work in progress version of react components inspired by [Topcoat](https://github.com/topcoat/topcoat)
 
 ---
 
