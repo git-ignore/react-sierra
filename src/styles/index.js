@@ -23,4 +23,3 @@ export const typographySizeBase = baseOffset;
 export const baseTransition = "all .2s ease";
 
 export const baseBorderRadius = "2px";
->>>>>>> button
