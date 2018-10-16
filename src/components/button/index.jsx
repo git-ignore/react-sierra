@@ -1,9 +1,12 @@
 // @flow
 
+import type { Props as ShapeProps } from "./shape";
+
 import React from "react";
 import styled from "styled-components";
+import Shape from "./shape";
 
-type Props = ShpeProps & {
+type Props = ShapeProps & {
   children: React$Node,
   onClick?: Function
 };
