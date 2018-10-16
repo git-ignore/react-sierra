@@ -1,4 +1,4 @@
-#### Work in progress version of react components inspired by [Topcoat](https://github.com/topcoat/topcoat)
+### Library of react ui-components inspired by [Wing css framework](https://github.com/kbrsh/wing)
 
 ---
 

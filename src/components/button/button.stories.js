@@ -1,22 +1,25 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import { storiesOf, addDecorator } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
+import { storiesOf } from "@storybook/react";
 import Button from "./index";
-import { offsets } from "../../styles";
+import { colors } from "../../styles";
 
 const DemoButton = styled(Button)`
-  margin: ${offsets.xs};
+  margin: 12px;
 `;
 
-storiesOf("Button", module).add("Button appearances", () => (
+storiesOf("Button", module).add("Buttons", () => (
   <Fragment>
-    <DemoButton>Primary button</DemoButton>
-    <DemoButton appearance="secondary">Secondary button</DemoButton>
-    <DemoButton outline>Primary outline</DemoButton>
-    <DemoButton appearance="secondary" outline>
-      Secondary outline
-    </DemoButton>
-    <DemoButton disabled>Primary button</DemoButton>
+    <Fragment>
+      <DemoButton>Button</DemoButton>
+      <DemoButton disabled>Disabled</DemoButton>
+    </Fragment>
+    <hr />
+    <Fragment>
+      <DemoButton outline>Outline</DemoButton>
+      <DemoButton outline disabled>
+        Outline disabled
+      </DemoButton>
+    </Fragment>
   </Fragment>
 ));
