@@ -1,20 +1,84 @@
 // @flow
 
-import type { Props as ShapeProps } from "./shape";
-
 import React from "react";
-import styled from "styled-components";
-import Shape from "./shape";
+import styled, { css } from "styled-components";
+import {
+  baseOffset,
+  baseBorderRadius,
+  baseTransition,
+  typographySizeBase,
+  colors
+} from "../../styles";
 
-type Props = ShapeProps & {
+type Props = {
   children: React$Node,
-  onClick?: Function
+  onClick?: Function,
+  outline?: boolean,
+  disabled?: boolean
 };
 
-const Button = ({ children, onClick = () => void 0, ...rest }: Props) => (
-  <Shape onClick={onClick} {...rest}>
-    {children}
-  </Shape>
-);
+const hoverStyles = css`
+  opacity: 0.9;
+`;
+
+const activeStyles = css`
+  opacity: 0.7;
+  transform: scale(0.98);
+`;
+
+const withStyle = ({ outline = false, disabled = false }: Props) => {
+  if (disabled) {
+    return css`
+      cursor: not-allowed;
+      opacity: 0.8;
+    `;
+  }
+
+  if (outline) {
+    return css`
+      border: 1.5px solid ${colors.black};
+      background: none;
+      color: ${colors.black};
+
+      ${!disabled &&
+        css`
+          &:hover,
+          &:focus {
+            background: ${colors.black};
+            color: ${colors.white};
+            ${hoverStyles};
+          }
+
+          &:active {
+            ${activeStyles};
+          }
+        `};
+    `;
+  }
+
+  return css`
+    &:hover,
+    &:focus {
+      ${hoverStyles};
+    }
+
+    &:active {
+      ${activeStyles};
+    }
+  `;
+};
+
+const Button = styled.button`
+  padding: 10px 30px;
+  margin-bottom: ${baseOffset};
+  background: ${colors.black};
+  border-radius: ${baseBorderRadius};
+  color: ${colors.white};
+  font-size: ${typographySizeBase};
+  ${withStyle};
+  outline: none;
+  text-decoration: none;
+  transition: ${baseTransition};
+`;
 
 export default Button;
