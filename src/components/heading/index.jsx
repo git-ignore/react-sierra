@@ -19,8 +19,8 @@ export const sizeStylesMapping = {
 
 type Props = {
   children: React$Node,
-  as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "div",
-  size: $Keys<typeof sizeStylesMapping>
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "div",
+  size?: $Keys<typeof sizeStylesMapping>
 };
 
 const withSizeStyles = ({ size = "md" }: Props) => sizeStylesMapping[size];
