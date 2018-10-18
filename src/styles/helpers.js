@@ -1,11 +1,17 @@
 // @flow
 
 import { css } from "styled-components";
-import { baseMediaBreakdown } from "./index";
 
-export const onLargeScreensOnly = (style: string): Array<any> =>
-  css`
-    @media ${baseMediaBreakdown} {
-      ${style};
+const sizes = {
+  lg: 1280,
+  md: 992
+};
+
+export const media = Object.keys(sizes).reduce((accumulator, label) => {
+  accumulator[label] = (...args: any) => css`
+    @media (min-width: ${sizes[label]}px) {
+      ${css(...args)};
     }
   `;
+  return accumulator;
+}, {});

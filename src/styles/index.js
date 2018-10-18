@@ -16,6 +16,7 @@ export const baseColors: ColorsCollection = {
   error: "#e74c3c",
   bg: "#2c3e50",
   gray: "#dee6ea",
+  textGray: "#969da6",
   grayLight: "#edf3f6",
   grayBlue: "#64829f",
   deepBlue: "#171722",
@@ -28,4 +29,4 @@ export const boxShadow: string = `0 0 5px ${baseShadowColor}}`;
 
 export const baseTransition: string = ".2s ease-in-out";
 
-export const baseMediaBreakdown: string = "(min-width: 992px)";
+export const baseFontMamily: string = '"Lato",sans-serif;';
