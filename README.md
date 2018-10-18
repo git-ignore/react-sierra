@@ -1,4 +1,4 @@
-### Library of react ui-components inspired by [Wing css framework](https://github.com/kbrsh/wing)
+### Library of react ui-components inspired by [Sierra css library](https://github.com/sierra-library/sierra)
 
 ---
 
