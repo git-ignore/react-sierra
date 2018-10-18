@@ -2,8 +2,8 @@
 
 import React from "react";
 import styled, { css } from "styled-components";
-import { baseColors, brandColors } from "../../styles";
-import { onLargeScreensOnly } from "../../styles/helpers";
+import { baseColors, brandColors, baseFontMamily } from "../../styles";
+import { media } from "../../styles/helpers";
 
 export const appearanceBgColorsMapping = {
   default: baseColors.grayBlue,
@@ -41,7 +41,7 @@ export const sizeStylesMapping = {
     font-size: 16px;
     line-height: 1.5em;
 
-    ${onLargeScreensOnly("padding: 10px 40px;")};
+    ${media.md`padding: 10px 40px;`};
   `
 };
 
@@ -87,7 +87,7 @@ const withSizeStyles = ({ size = "md" }: Props) => sizeStylesMapping[size];
 const Button = styled.button`
   padding: 10px 20px;
   border-radius: 2em;
-  font-family: "Lato", sans-serif;
+  font-family: ${baseFontMamily};
   font-size: 12px;
   font-weight: 700;
   line-height: 1.5em;
