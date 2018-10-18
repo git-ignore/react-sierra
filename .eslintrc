@@ -1,0 +1,55 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "extends": ["eslint:recommended", "plugin:flowtype/recommended"],
+  "rules": {
+    "arrow-parens": [2, "as-needed"],
+    "comma-dangle": [2, "never"],
+    "curly": 2,
+    "quotes": [2, "single"],
+    "semi": [2, "always"],
+    "eqeqeq": [2, "smart"],
+    "no-self-compare": 2,
+    "no-useless-call": 2,
+    "no-unused-vars": 2,
+    "vars-on-top": 2,
+    "no-use-before-define": 2,
+    "react/prop-types": 2,
+    "react/no-unused-prop-types": 2,
+    "react/jsx-indent-props": 0,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/jsx-closing-bracket-location": [
+      2,
+      { "selfClosing": "tag-aligned", "nonEmpty": "after-props" }
+    ],
+    "react/jsx-pascal-case": 2,
+    "react/jsx-no-undef": 2,
+    "react/jsx-equals-spacing": [2, "never"],
+    "object-curly-spacing": [2, "never"],
+    "arrow-body-style": [2, "as-needed"],
+    "max-len": [2, 100],
+    "prefer-template": 2,
+    "import/no-unresolved": 0,
+    "import/no-useless-path-segments": 2,
+    "no-underscore-dangle": 2,
+    "prettier/prettier": 2,
+    "no-multiple-empty-lines": [2, { "max": 1 }],
+    "flowtype/space-after-type-colon": [
+      2,
+      "always",
+      { "allowLineBreak": true }
+    ],
+    "styled-components-config/rule-name": 2
+  },
+  "plugins": [
+    "react",
+    "import",
+    "class-property",
+    "prettier",
+    "styled-components-config",
+    "flowtype"
+  ]
+}
