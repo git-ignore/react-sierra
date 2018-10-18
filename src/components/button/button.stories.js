@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { baseColors } from "../../styles";
-import Button, { appearanceBgColorsMapping, sizeStylesMapping } from "./index";
+import Button from "./index";
+import { appearanceBgColorsMapping, sizeStylesMapping } from "./shape";
 
 const DemoButton = styled(Button)`
   margin: 12px;
@@ -44,6 +45,23 @@ storiesOf("Button", module).add("Sizes", () => (
       .map(size => (
         <DemoButton key={`button-${size}`} size={size}>
           Button {size}
+        </DemoButton>
+      ))}
+  </StoryContainer>
+));
+
+storiesOf("Button", module).add("With icons", () => (
+  <StoryContainer>
+    {Object.keys(appearanceBgColorsMapping).map(color => (
+      <DemoButton key={`button-${color}`} icon="edit" appearance={color}>
+        Button
+      </DemoButton>
+    ))}
+    {Object.keys(sizeStylesMapping)
+      .reverse()
+      .map(size => (
+        <DemoButton key={`button-${size}`} size={size} icon="user-circle">
+          Button
         </DemoButton>
       ))}
   </StoryContainer>

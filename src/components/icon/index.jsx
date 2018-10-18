@@ -21,7 +21,7 @@ const Shape = styled.svg`
 
 const Icon = ({
   name,
-  size = 22,
+  size = 18,
   color = baseColors.textGray,
   ...rest
 }: Props): React$Node => (
