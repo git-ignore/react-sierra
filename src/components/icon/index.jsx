@@ -5,7 +5,7 @@ import type {IconName} from './icons';
 import React from 'react';
 import styled from 'styled-components';
 import {icons} from './icons';
-import {colors} from '../../styles';
+import {colors, baseTransition} from '../../styles';
 
 type Props = {
   name: IconName,
@@ -15,14 +15,14 @@ type Props = {
 
 const Shape = styled.svg`
   display: inline-block;
-  transition: color 0.2s ease-in-out;
+  transition: color ${baseTransition};
   vertical-align: middle;
 `;
 
 const Icon = ({
   name,
   size = 18,
-  color = colors.grayDark,
+  color = colors.darkGray,
   ...rest
 }: Props): React$Node => (
   <Shape

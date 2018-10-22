@@ -2,15 +2,18 @@
 
 import React from 'react';
 import styled, {css} from 'styled-components';
-import {offsets, colors, baseFontMamily, baseTransition} from '../../styles';
+import {offsets, colors, baseTransition} from '../../styles';
 
 type AppearanceType = "primary" | "secondary";
 
-export type Props = {
+export type ShapeProps = {
   appearance?: AppearanceType,
-  disabled?: boolean,
-  withIcon: boolean
+  disabled?: boolean
 };
+
+type Props = ShapeProps & {
+  withIcon: boolean
+}
 
 export const getButtonColor = (appearance: AppearanceType): string =>
   appearance === 'primary' ? '#FFF' : colors.darkGray;

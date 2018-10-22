@@ -355,6 +355,7 @@ declare module 'styled-components' {
   declare export var ServerStyleSheet: typeof Npm$StyledComponents$ServerStyleSheet;
   declare export var StyleSheetManager: typeof Npm$StyledComponents$StyleSheetManager;
   declare export var ThemeProvider: typeof Npm$StyledComponents$ThemeProvider;
+  declare export var createGlobalStyle: any;
 
   declare export default {
     css: TaggedTemplateLiteral<Array<Interpolation>>,

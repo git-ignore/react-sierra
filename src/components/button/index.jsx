@@ -1,6 +1,6 @@
 // @flow
 
-import type {Props as ShapeProps} from './shape';
+import type {ShapeProps} from './shape';
 import type {IconName} from '../icon/icons';
 import Shape, {getButtonColor} from './shape';
 
