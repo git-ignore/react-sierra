@@ -1,10 +1,9 @@
-## Library of react ui-components inspired by [Sierra css library](https://github.com/sierra-library/sierra)
+## Library of react ui-components inspired by [Old good skeleton](http://getskeleton.com/)
 
 ---
 
-- Using `@storybook/react` for development.
+- Using `react-styleguidist` for documentation.
 - Using `styled-components`
-- Current showcase is available [here](https://git-ignore.github.io/react-styled-sierra)
 
 ---
 
@@ -12,15 +11,13 @@
 
 - [x] Buttons
 
-- [x] Headings
+- [x] Icons
 
-- [ ] Components API documentation
+- [ ] Headings
 
 - [ ] Table component
 
-- [ ]  Colors styleguide
-
-- [ ]  Form inputs
+- [ ] Form inputs
 
 - [ ] Form checkboxes
 
