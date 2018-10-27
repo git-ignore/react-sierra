@@ -7,7 +7,8 @@ export const colors: ColorsCollection = {
   primaryDarken: '#1EAEDB',
   grayLight: '#bbb',
   gray: '#888',
-  darkGray: '#555'
+  darkGray: '#555',
+  alert: '#f50031'
 };
 
 export const offsets: OffsetsCollection = {
