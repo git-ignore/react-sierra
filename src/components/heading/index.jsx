@@ -38,8 +38,8 @@ type Props = {
 const withSizeStyles = ({size = 'md' }: Props) => sizePropsMapping[size];
 
 const Heading = styled.div`
-  font-weight: 300;
   margin-bottom: 2rem;
+  font-weight: 300;
   letter-spacing: -0.1rem;
   ${withSizeStyles};
 `;

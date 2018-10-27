@@ -13,7 +13,7 @@
 
 - [x] Icons
 
-- [ ] Headings
+- [x] Headings
 
 - [ ] Table component
 

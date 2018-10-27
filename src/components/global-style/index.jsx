@@ -10,10 +10,13 @@ const GlobalStyle = createGlobalStyle`
         font-size: 62.5%;
     }
     body {
+        box-sizing: border-box;
         font-family: ${baseFontMamily};
         font-size: 1.5em;
         font-weight: 400;
-
+    }
+    body * {
+        box-sizing: border-box;
     }
 `;
 
