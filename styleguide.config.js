@@ -10,6 +10,9 @@ module.exports = {
     // in order to specify it manually in component's readme.md
     return {};
   },
+  styleguideComponents: {
+    Wrapper: path.join(__dirname, 'styleguide/components/wrapper')
+  },
   template: {
     head: {
       links: [

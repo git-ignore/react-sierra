@@ -2,13 +2,19 @@
 
 import React from 'react';
 import {createGlobalStyle} from 'styled-components';
-import {baseFontMamily} from './styles';
+import {baseFontMamily} from '../../styles';
 
 const GlobalStyle = createGlobalStyle`
-  body {
     @import url('https://fonts.googleapis.com/css?family=Raleway');
-    font-family: ${baseFontMamily};
-  }
+    html {
+        font-size: 62.5%;
+    }
+    body {
+        font-family: ${baseFontMamily};
+        font-size: 1.5em;
+        font-weight: 400;
+
+    }
 `;
 
 export default GlobalStyle;
