@@ -5,6 +5,8 @@
 - Using `react-styleguidist` for documentation.
 - Using `styled-components`
 
+[Here's the docs](https://git-ignore.github.io/react-skeleton-ui/)
+
 ---
 
 ## Roadmap

@@ -1,6 +1,7 @@
 .idea
 .DS_Store
 build
-storybook-static
+styleguide/build
+styleguide/index.html
 node_modules
 *.log
