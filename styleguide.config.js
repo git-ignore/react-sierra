@@ -3,7 +3,7 @@ const {createConfig, babel} = require('webpack-blocks');
 
 module.exports = {
   webpackConfig: createConfig([babel()]),
-  title: 'react-sceleton-ui',
+  title: 'react-skeleton-ui',
   components: 'src/components/**/index.jsx',
   propsParser() {
     // disable props parsing because of https://github.com/reactjs/react-docgen/issues/33
