@@ -4,6 +4,7 @@
   "description": "Library of react ui-components inspired by old good skeleton-ui",
   "main": "build/index.js",
   "scripts": {
+    "dev": "yarn styleguidist server",
     "clean": "rm -rf ./build",
     "build": "yarn run clean && NODE_ENV=production `yarn bin`/babel ./src --presets minify --out-dir ./build --ignore '**/*.stories.js'",
     "prepublishOnly": "yarn run build"

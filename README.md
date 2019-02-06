@@ -18,9 +18,11 @@
 
 - [x] Headings
 
-- [ ] Table component
+- [x] Form inputs
 
-- [ ] Form inputs
+- Moving to mobile-first development
+
+- [ ] Table component
 
 - [ ] Form checkboxes
 
