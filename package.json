@@ -1,13 +1,21 @@
 {
   "name": "react-sceleton-ui",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Library of react ui-components inspired by old good skeleton-ui",
   "main": "build/index.js",
   "scripts": {
     "clean": "rm -rf ./build",
-    "build": "yarn run clean && NODE_ENV=production `yarn bin`/babel ./src --presets minify --out-dir ./build --ignore '**/*.stories.js'"
+    "build": "yarn run clean && NODE_ENV=production `yarn bin`/babel ./src --presets minify --out-dir ./build --ignore '**/*.stories.js'",
+    "prepublishOnly": "yarn run build"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "react-component",
+    "styled-components",
+    "ui-library",
+    "styled-ui-kit",
+    "ui-kit"
+  ],
   "author": "s.belov<bsemyon@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
