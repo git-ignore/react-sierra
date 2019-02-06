@@ -1,5 +1,5 @@
 {
-  "name": "react-skeleton-ui",
+  "name": "react-skeleton-ui-kit",
   "version": "0.0.2",
   "description": "Library of react ui-components inspired by old good skeleton-ui",
   "main": "build/index.js",
