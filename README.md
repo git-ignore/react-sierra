@@ -3,7 +3,8 @@
 ---
 
 - Using `react-styleguidist` for documentation.
-- Using `styled-components`
+- Built with `styled-components`
+- Using `flow` for type cheking => props validation
 
 [Here's the docs](https://git-ignore.github.io/react-skeleton-ui/)
 

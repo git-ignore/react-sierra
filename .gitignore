@@ -5,3 +5,4 @@ styleguide/build
 styleguide/index.html
 node_modules
 *.log
+deploy-docs.sh

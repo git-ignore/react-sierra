@@ -17,6 +17,10 @@
     "ui-kit"
   ],
   "author": "s.belov<bsemyon@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/git-ignore/react-skeleton-ui"
+  },
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.5.2",

@@ -1,2 +1,12 @@
 .babelrc
 src
+flow-typed
+node_modules
+styleguide
+.eslintrc
+.flowconfig
+.gitignore
+.stylelintrc
+deploy.sh
+styleguide.config.js
+yarn.lock
