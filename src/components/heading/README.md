@@ -1,4 +1,4 @@
-Button example:
+Heading example:
 
 ```jsx
 <Heading size="lg">Heading LG</Heading>
