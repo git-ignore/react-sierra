@@ -20,7 +20,7 @@
 
 - [x] Form inputs
 
-- Moving to mobile-first development
+- [ ] Moving to mobile-first development
 
 - [ ] Table component
 
