@@ -21,10 +21,6 @@
     "react/jsx-indent-props": 0,
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
-    "react/jsx-closing-bracket-location": [
-      2,
-      { "selfClosing": "tag-aligned", "nonEmpty": "after-props" }
-    ],
     "react/jsx-pascal-case": 2,
     "react/jsx-no-undef": 2,
     "react/jsx-equals-spacing": [2, "never"],
@@ -36,13 +32,8 @@
     "import/no-useless-path-segments": 2,
     "no-underscore-dangle": 2,
     "prettier/prettier": 2,
-    "no-multiple-empty-lines": [2, { "max": 1 }],
-    "flowtype/space-after-type-colon": [
-      2,
-      "always",
-      { "allowLineBreak": true }
-    ],
-    "styled-components-config/rule-name": 2
+    "no-multiple-empty-lines": [2, {"max": 1}],
+    "flowtype/space-after-type-colon": [2, "always", {"allowLineBreak": true}]
   },
   "plugins": [
     "react",

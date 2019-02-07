@@ -1,8 +1,7 @@
 // @flow
 
 import React from 'react';
-import styled, {css} from 'styled-components';
-import {colors} from '../../styles';
+import styled from 'styled-components';
 import Error from './error';
 import Container from './container';
 import {baseInputStyles} from './styles';

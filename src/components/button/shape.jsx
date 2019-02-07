@@ -1,10 +1,9 @@
 // @flow
 
-import React from 'react';
 import styled, {css} from 'styled-components';
-import {offsets, colors, baseTransition} from '../../styles';
+import {colors, baseTransition} from '../../styles';
 
-type AppearanceType = "primary" | "secondary";
+type AppearanceType = 'primary' | 'secondary';
 
 export type ShapeProps = {
   appearance?: AppearanceType,
@@ -13,7 +12,7 @@ export type ShapeProps = {
 
 type Props = ShapeProps & {
   withIcon: boolean
-}
+};
 
 export const getButtonColor = (appearance: AppearanceType): string =>
   appearance === 'primary' ? '#FFF' : colors.darkGray;

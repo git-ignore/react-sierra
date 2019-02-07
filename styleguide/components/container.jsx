@@ -15,8 +15,6 @@ type Props = {
   children: React$Node
 };
 
-const Container = ({children}: Props): React$Node => (
-  <Shape>{children}</Shape>
-);
+const Container = ({children}: Props): React$Node => <Shape>{children}</Shape>;
 
 export default Container;

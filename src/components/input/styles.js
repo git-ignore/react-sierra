@@ -1,6 +1,6 @@
 // @flow
 
-import styled, {css} from 'styled-components';
+import {css} from 'styled-components';
 import {colors} from '../../styles';
 
 export type InputProps = {

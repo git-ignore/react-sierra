@@ -30,7 +30,8 @@ const Icon = ({
     height={size}
     viewBox="0 0 1024 1024"
     fill={color}
-    {...rest}>
+    {...rest}
+  >
     <path d={icons[name]} />
   </Shape>
 );

@@ -1,6 +1,5 @@
 // @flow
 
-import React, {PureComponent} from 'react';
 import styled, {css} from 'styled-components';
 
 export type Props = {

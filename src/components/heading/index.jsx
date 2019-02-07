@@ -1,6 +1,5 @@
 // @flow
 
-import React from 'react';
 import styled, {css} from 'styled-components';
 import {media} from '../../styles/helpers';
 
@@ -32,10 +31,10 @@ const sizePropsMapping = {
 };
 
 type Props = {
-  size: "sm" | "md" | "lg"
+  size: 'sm' | 'md' | 'lg'
 };
 
-const withSizeStyles = ({size = 'md' }: Props) => sizePropsMapping[size];
+const withSizeStyles = ({size = 'md'}: Props) => sizePropsMapping[size];
 
 const Heading = styled.div`
   margin-bottom: 2rem;

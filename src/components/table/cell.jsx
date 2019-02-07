@@ -1,11 +1,11 @@
 // @flow
 
-import React, {PureComponent} from 'react';
+import React from 'react';
 import styled, {css} from 'styled-components';
 import {colors} from '../../styles';
 
 export type CellAlignType = {
-  align?: "left" | "center" | "right"
+  align?: 'left' | 'center' | 'right'
 };
 
 type Props = CellAlignType & {
@@ -15,8 +15,8 @@ type Props = CellAlignType & {
 
 const cellStyles = css`
   padding: 12px 15px;
-  text-align: ${({align = 'left' }: Props): string => align};
   border-bottom: 1px solid ${colors.grayLight};
+  text-align: ${({align = 'left'}: Props): string => align};
 
   &:first-child {
     padding-left: 0;

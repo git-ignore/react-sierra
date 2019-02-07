@@ -1,5 +1,7 @@
 // @flow
 
+/* eslint-disable max-len*/
+
 export const icons = Object.freeze({
   close:
     'M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z',
@@ -25,4 +27,4 @@ export const icons = Object.freeze({
 });
 
 export type IconName = $Keys<typeof icons>;
-export type IconCollection = { [name: IconName]: string };
+export type IconCollection = {[name: IconName]: string};

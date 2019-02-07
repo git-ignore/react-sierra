@@ -4,8 +4,7 @@ import type {Props as THeadProps} from './thead';
 import type {Props as ShapeProps} from './shape';
 import type {CellAlignType} from './cell';
 
-import React, {PureComponent} from 'react';
-import styled, {css} from 'styled-components';
+import React from 'react';
 import TableShape from './shape';
 import THead from './thead';
 import Cell from './cell';

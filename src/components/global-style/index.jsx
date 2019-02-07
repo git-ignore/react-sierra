@@ -1,6 +1,5 @@
 // @flow
 
-import React from 'react';
 import {createGlobalStyle} from 'styled-components';
 import {baseFontMamily} from '../../styles';
 
