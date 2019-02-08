@@ -3,41 +3,41 @@ Table example:
 ```jsx
 const dataSource = [
   {
-    key: "1",
-    name: "Mike",
+    sex: 'Male',
+    key: '1',
+    name: 'Mike',
     age: 32,
-    sex: "Male",
-    address: "10 Downing Street"
+    address: '10 Downing Street'
   },
   {
-    key: "2",
-    name: "John",
+    address: '1657 Riverside Drive Redding',
+    key: '2',
+    name: 'John',
     age: 42,
-    sex: "Male",
-    address: "1657 Riverside Drive Redding"
+    sex: 'Male'
   }
 ];
 
 const columns = [
   {
-    title: "Name",
-    dataIndex: "name",
-    key: "name"
+    title: 'Name',
+    dataIndex: 'name',
+    key: 'name'
   },
   {
-    title: "Age",
-    dataIndex: "age",
-    key: "age"
+    title: 'Age',
+    dataIndex: 'age',
+    key: 'age'
   },
   {
-    title: "Sex",
-    dataIndex: "sex",
-    key: "sex"
+    title: 'Sex',
+    dataIndex: 'sex',
+    key: 'sex'
   },
   {
-    title: "Address",
-    dataIndex: "address",
-    key: "address"
+    title: 'Address',
+    dataIndex: 'address',
+    key: 'address'
   }
 ];
 

@@ -8,7 +8,7 @@ import Cell from './cell';
 export type Props = CellAlignType & {
   columns: Array<{
     title: string,
-    dataIndex: string,
+    dataIndex: string | number,
     key: string
   }>
 };

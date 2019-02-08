@@ -9,7 +9,7 @@ export type CellAlignType = {
 };
 
 type Props = CellAlignType & {
-  children: any,
+  children: React$Node,
   isHeading?: boolean
 };
 
