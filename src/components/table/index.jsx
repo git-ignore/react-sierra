@@ -40,7 +40,6 @@ class Table extends PureComponent<Props, State> {
 
   render(): React$Node {
     const {columns, data, align, ...rest} = this.props;
-    console.log(this.state);
 
     return (
       <TableShape {...rest}>
@@ -62,20 +61,5 @@ class Table extends PureComponent<Props, State> {
     );
   }
 }
-
-// const Table = ({columns, data, align, ...rest}: Props): React$Node => (
-//   <TableShape {...rest}>
-//     <THead columns={columns} align={align} />
-//     {data.map(({key, ...item}) => (
-//       <tr key={key}>
-//         {Object.entries(item).map(([key, value]) => (
-//           <Cell key={key} align={align}>
-//             {value}
-//           </Cell>
-//         ))}
-//       </tr>
-//     ))}
-//   </TableShape>
-// );
 
 export default Table;
