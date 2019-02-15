@@ -6,7 +6,7 @@
 - Built with `styled-components`
 - Using `flow` for type cheking => props validation
 
-[Here's the docs](https://git-ignore.github.io/react-skeleton-ui/)
+## [Find out the docs here](https://git-ignore.github.io/react-skeleton-ui/)
 
 ---
 
@@ -22,7 +22,9 @@
 
 - [ ] Moving to mobile-first development
 
-- [ ] Table component
+- [ ] Grid
+
+- [x] Table component
 
 - [ ] Form checkboxes
 
