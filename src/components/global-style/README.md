@@ -3,8 +3,8 @@ Place it at the top of your React tree and the global styles will be injected wh
 
 Example:
 
-`import {GlobalStyle} from '../../src';`
-
-`<GlobalStyle />`
+```jsx static
+<GlobalStyle />
+```
 
 ---
