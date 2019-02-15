@@ -26,6 +26,7 @@ const cellStyles = css`
 const TH = styled.th`
   ${cellStyles};
 `;
+
 const TD = styled.td`
   ${cellStyles};
 `;

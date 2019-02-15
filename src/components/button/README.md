@@ -8,10 +8,10 @@ Button example:
 ```
 
 ```jsx
-<Button style={{margin: '10px'}} icon="edit">Button</Button>
-<Button appearance="secondary" style={{margin: '10px'}} icon="edit">Button</Button>
-<Button disabled style={{margin: '10px'}} icon="edit">Disabled</Button>
-<Button appearance="secondary" disabled style={{margin: '10px'}} icon="edit">Disabled</Button>
+<Button style={{margin: '10px'}} icon="download">Button</Button>
+<Button appearance="secondary" style={{margin: '10px'}} icon="download">Button</Button>
+<Button disabled style={{margin: '10px'}} icon="download">Disabled</Button>
+<Button appearance="secondary" disabled style={{margin: '10px'}} icon="download">Disabled</Button>
 ```
 
 ### Props

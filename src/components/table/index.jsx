@@ -13,6 +13,7 @@ type DataItem = {
   key: string | number,
   dataIndex: string | number
 };
+
 type Props = THeadProps &
   ShapeProps &
   CellAlignType & {

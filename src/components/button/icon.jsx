@@ -6,7 +6,6 @@ import Icon from '../icon';
 const StyledIcon = styled(Icon).attrs({
   size: 16
 })`
-  margin-top: -2px;
   margin-right: 10px;
 `;
 
