@@ -1,5 +1,3 @@
-Table example:
-
 ```jsx
 const dataSource = [
   {

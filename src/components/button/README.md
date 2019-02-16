@@ -1,5 +1,3 @@
-Button example:
-
 ```jsx
 <Button appearance="primary" style={{margin: '10px'}}>Primary button</Button>
 <Button appearance="secondary" style={{margin: '10px'}}>Secondary button</Button>

@@ -1,5 +1,3 @@
-Textarea example:
-
 ```jsx
 <div style={{width: '350px'}}>
   <Textarea

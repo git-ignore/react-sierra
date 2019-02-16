@@ -20,9 +20,9 @@
 
 - [x] Form inputs
 
-- [ ] Moving to mobile-first development
+- [x] Moving to mobile-first development
 
-- [ ] Grid
+- [x] Grid
 
 - [x] Table component
 

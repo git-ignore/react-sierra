@@ -1,5 +1,3 @@
-Heading example:
-
 ```jsx
 <Heading size="lg">Heading LG</Heading>
 <Heading>Heading MD</Heading>

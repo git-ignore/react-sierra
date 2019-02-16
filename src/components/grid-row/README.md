@@ -1,2 +1,2 @@
-Basic layout row.
-`GridCol` shoud be placed inside `GridRow`
+_Basic layout row._
+`GridCol` _shoud be placed inside_ `GridRow`

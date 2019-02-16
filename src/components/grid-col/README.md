@@ -1,5 +1,5 @@
-The GridCol allows to specify column widths across 5 breakpoint sizes (xs, sm, md, lg, and xl).
-For every breakpoint, you can specify the amount of columns to span.
+_The GridCol allows to specify column widths across 5 breakpoint sizes (xs, sm, md, lg, and xl)._
+_For every breakpoint, you can specify the amount of columns to span._
 
 ```jsx
 <GridRow>

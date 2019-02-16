@@ -1,7 +1,5 @@
-Icon examples:
-
 ```jsx noeditor
-const file = require("./icons");
+const file = require('./icons');
 <DemoContainer>
   {Object.keys(file.icons).map((icon, i) => (
     <IconDemoCard key={`icon--${i}`} name={icon}>
