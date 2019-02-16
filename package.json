@@ -1,6 +1,6 @@
 {
   "name": "react-skeleton-ui-kit",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Library of react ui-components inspired by old good skeleton-ui",
   "main": "build/index.js",
   "scripts": {
