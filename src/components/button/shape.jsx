@@ -6,7 +6,7 @@ import styled, {css} from 'styled-components';
 type AppearanceType = 'primary' | 'secondary';
 
 export type ShapeProps = {
-  appearance?: AppearanceType,
+  appearance: AppearanceType,
   disabled?: boolean,
   theme: ThemeProps
 };
@@ -15,14 +15,14 @@ type Props = ShapeProps & {
   withIcon: boolean
 };
 
-export const getButtonColor = (
+export const getButtonTextColor = (
   appearance: AppearanceType,
   colors: ColorsType
 ): string => (appearance === 'primary' ? '#FFF' : colors.grayText);
 
-const withTextColor = ({appearance = 'primary', theme: {colors}}: Props) =>
+const withTextColor = ({appearance, theme: {colors}}: Props) =>
   css`
-    color: ${getButtonColor(appearance, colors)};
+    color: ${getButtonTextColor(appearance, colors)};
   `;
 
 const withBgColor = ({appearance, theme: {colors}}: Props) => css`
@@ -61,7 +61,7 @@ const withHoverStyles = ({appearance, theme: {colors}}: Props) =>
         }
       `;
 
-const withAppearanceStyles = ({disabled = false}: Props) => css`
+const withAppearanceStyles = ({disabled}: Props) => css`
   ${withTextColor} 
   ${withBgColor}
   ${withBorderColor}

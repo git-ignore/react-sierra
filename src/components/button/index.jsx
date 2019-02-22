@@ -6,7 +6,7 @@ import type {IconName} from '../icon/icons';
 import React from 'react';
 import {withTheme} from 'styled-components';
 import Icon from './icon';
-import Shape, {getButtonColor} from './shape';
+import Shape, {getButtonTextColor} from './shape';
 import defaultTheme from '../../styles';
 
 type Props = ShapeProps & {
@@ -25,7 +25,7 @@ const Button = ({
     {icon ? (
       <Icon
         name={icon}
-        color={getButtonColor(
+        color={getButtonTextColor(
           rest.appearance || Shape.defaultProps.appearance,
           rest.theme.colors
         )}
