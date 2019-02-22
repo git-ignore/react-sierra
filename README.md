@@ -30,6 +30,10 @@
 
 - [ ] Form radio groups
 
-- [ ] Build optimization
+- [ ] Colors, offsets and screenSizes docs
+
+- [ ] Dark theme
 
 ...
+
+_Feel free to contribute or report any bugs_
