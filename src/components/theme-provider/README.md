@@ -1,6 +1,5 @@
 _This component provides a theme to all React components underneath itself via the context API._
-
-_**WARNING! - since 0.0.6 react-skeleton-ui-kit components wont be able to render correctly without theme context**_
+_It can be useful if you want to use colors, offsets, transitions and other theme-stuff from react-skeleton-ui in your app._
 
 ```jsx static
 <ThemeProvider>
@@ -14,7 +13,9 @@ _**WARNING! - since 0.0.6 react-skeleton-ui-kit components wont be able to rende
 | ----------------- | :----: | ------: | -------------------------: |
 | `overriddenProps` | object |      -- | theme props to override it |
 
-**Default theme props.<br/> Also available for overriding by passing to `overriddenProps` (see example below):**
+**Default theme props**
+
+_Also available for override (see example below):_
 
 ```js static
 {
@@ -29,7 +30,7 @@ _**WARNING! - since 0.0.6 react-skeleton-ui-kit components wont be able to rende
 }
 ```
 
-_You can style library components by passing your own theme to ThemeProvider:_
+_You can also style ui-components by passing your own theme to ThemeProvider:_
 
 ```jsx
 const customThemeColors = {

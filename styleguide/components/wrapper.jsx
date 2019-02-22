@@ -11,8 +11,11 @@ type Props = {
 const Wrapper = ({children}: Props) => (
   <Fragment>
     <GlobalStyle />
-
-    <Fragment>{children}</Fragment>
+    <Fragment>
+      <ThemeProvider>
+        <Fragment>{children}</Fragment>
+      </ThemeProvider>
+    </Fragment>
   </Fragment>
 );
 
