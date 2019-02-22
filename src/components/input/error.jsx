@@ -1,11 +1,15 @@
 // @flow
 
 import styled from 'styled-components';
-import {colors} from '../../styles';
+import type {ThemeProps} from '../../styles';
+
+type Props = {
+  theme: ThemeProps
+};
 
 const Error = styled.span`
   padding: 3px 10px;
-  color: ${colors.alert};
+  color: ${({theme: {colors}}: Props): string => colors.alert};
   font-size: 1.1rem;
 `;
 

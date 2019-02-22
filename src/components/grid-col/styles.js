@@ -1,6 +1,6 @@
 // @flow
 
-import type {GridRange} from './index';
+import type {GridRange, Props} from './index';
 
 import {css} from 'styled-components';
 import {rem, media, sizes} from '../../styles/helpers';
@@ -11,7 +11,7 @@ const INITIAL_STYLE = css`
   flex: 0 0 100%;
 `;
 
-const getSizeStyle = (val: GridRange): ?string => {
+const getSizeStyle = (val: GridRange): Array<any> => {
   if (val === 0) {
     return css`
       display: none;
@@ -32,7 +32,7 @@ const shouldCalcStyle = val =>
   val !== undefined && typeof val === 'number' && val >= 0 && val <= 12;
 
 // TODO: DRY: screen mapping
-export const withSizeStyles = ({xs, sm, md, lg, xl}) => css`
+export const withSizeStyles = ({xs, sm, md, lg, xl}: Props): Array<any> => css`
   ${shouldCalcStyle(xs) ? getSizeStyle(xs) : INITIAL_STYLE};
 
   ${shouldCalcStyle(sm) &&

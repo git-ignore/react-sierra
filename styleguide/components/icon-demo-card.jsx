@@ -2,16 +2,16 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import {offsets} from '../../src/styles';
+import theme from '../../src/styles';
 
 const Card = styled.div`
   display: flex;
   align-items: center;
-  margin: ${offsets.sm};
+  margin: ${theme.offsets.sm};
 `;
 
 const Name = styled.span`
-  margin-left: calc(${offsets.sm} / 2);
+  margin-left: calc(${theme.offsets.sm} / 2);
 `;
 
 type Props = {

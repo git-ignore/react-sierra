@@ -1,8 +1,10 @@
 // @flow
 
+import type {ThemeProps} from '../../styles';
+
 import React from 'react';
-import styled, {css} from 'styled-components';
-import {colors} from '../../styles';
+import styled, {css, withTheme} from 'styled-components';
+import defaultTheme from '../../styles';
 
 export type CellAlignType = {
   align?: 'left' | 'center' | 'right'
@@ -10,12 +12,14 @@ export type CellAlignType = {
 
 type Props = CellAlignType & {
   children: React$Node,
-  isHeading?: boolean
+  isHeading?: boolean,
+  theme: ThemeProps
 };
 
 const cellStyles = css`
   padding: 12px 15px;
-  border-bottom: 1px solid ${colors.grayLight};
+  border-bottom: 1px solid
+    ${({theme: {colors}}: Props): string => colors.grayLight};
   text-align: ${({align = 'left'}: Props): string => align};
 
   &:first-child {
@@ -36,4 +40,8 @@ const Cell = ({children, isHeading, ...rest}: Props): React$Node => {
   return <Tag {...rest}>{children}</Tag>;
 };
 
-export default Cell;
+Cell.defaultProps = {
+  theme: defaultTheme
+};
+
+export default withTheme(Cell);

@@ -1,23 +1,53 @@
 // @flow
 
-import type {ColorsCollection, OffsetsCollection} from './types';
-
-export const colors: ColorsCollection = {
+const colors = Object.freeze({
   primary: '#33C3F0',
   primaryDarken: '#1EAEDB',
   grayLight: '#bbb',
+  grayText: '#555',
   gray: '#888',
-  darkGray: '#555',
   alert: '#f50031'
-};
+});
 
-export const offsets: OffsetsCollection = {
+const offsets = Object.freeze({
   sm: '10px',
   md: '20px',
   lg: '30px'
+});
+
+const transitions = Object.freeze({
+  base: '.2s ease-in-out'
+});
+
+const fonts = Object.freeze({
+  family: {
+    base:
+      '"Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;'
+  }
+});
+
+const defaultTheme = {
+  colors,
+  offsets,
+  transitions,
+  fonts
 };
 
-export const baseTransition: string = '.2s ease-in-out';
+// types
+export type ColorsType = {[key: $Keys<typeof colors>]: string};
+type OffsetsType = {[key: $Keys<typeof offsets>]: string};
+type TransitionsType = {[key: $Keys<typeof transitions>]: string};
+type FontsType = {
+  family: {
+    base: string
+  }
+};
 
-export const baseFontMamily: string =
-  '"Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;';
+export type ThemeProps = {
+  colors: ColorsType,
+  offsets: OffsetsType,
+  transitions: TransitionsType,
+  fonts: FontsType
+};
+
+export default defaultTheme;

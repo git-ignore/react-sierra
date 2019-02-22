@@ -1,34 +1,37 @@
 // @flow
 
+import type {ThemeProps, ColorsType} from '../../styles';
 import styled, {css} from 'styled-components';
-import {colors, baseTransition} from '../../styles';
 
 type AppearanceType = 'primary' | 'secondary';
 
 export type ShapeProps = {
   appearance?: AppearanceType,
-  disabled?: boolean
+  disabled?: boolean,
+  theme: ThemeProps
 };
 
 type Props = ShapeProps & {
   withIcon: boolean
 };
 
-export const getButtonColor = (appearance: AppearanceType): string =>
-  appearance === 'primary' ? '#FFF' : colors.darkGray;
+export const getButtonColor = (
+  appearance: AppearanceType,
+  colors: ColorsType
+): string => (appearance === 'primary' ? '#FFF' : colors.grayText);
 
-const withTextColor = ({appearance = 'primary'}: Props) =>
+const withTextColor = ({appearance = 'primary', theme: {colors}}: Props) =>
   css`
-    color: ${getButtonColor(appearance)};
+    color: ${getButtonColor(appearance, colors)};
   `;
 
-const withBgColor = ({appearance}: Props) => css`
+const withBgColor = ({appearance, theme: {colors}}: Props) => css`
   background-color: ${appearance === 'primary'
     ? colors.primary
     : 'transparent'};
 `;
 
-const withBorderColor = ({appearance}: Props) =>
+const withBorderColor = ({appearance, theme: {colors}}: Props) =>
   css`
     border-color: ${appearance === 'primary'
       ? colors.primary
@@ -45,7 +48,7 @@ const withDisabledStyle = ({disabled}: Props) =>
         cursor: pointer;
       `;
 
-const withHoverStyles = ({appearance}: Props) =>
+const withHoverStyles = ({appearance, theme: {colors}}: Props) =>
   appearance === 'primary'
     ? css`
         &:hover {
@@ -88,7 +91,7 @@ const Shape = styled.button`
   ${withPaddings};
   outline: none;
   text-transform: uppercase;
-  transition: ${baseTransition};
+  transition: ${({theme}: Props): string => theme.transitions.base};
   white-space: nowrap;
 
   &:active {
