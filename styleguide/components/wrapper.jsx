@@ -2,6 +2,7 @@
 
 import React, {Fragment} from 'react';
 import {GlobalStyle} from '../../src';
+import {ThemeProvider} from '../../src';
 
 type Props = {
   children: React$Node
@@ -10,7 +11,8 @@ type Props = {
 const Wrapper = ({children}: Props) => (
   <Fragment>
     <GlobalStyle />
-    {children}
+
+    <Fragment>{children}</Fragment>
   </Fragment>
 );
 

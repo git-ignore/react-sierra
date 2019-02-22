@@ -36,7 +36,7 @@ module.exports = {
     fontFamily: {
       base:
         '"Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif',
-      color: '#222'
+      color: '#555'
     }
   },
   require: [path.resolve(__dirname, 'styleguide/setup.js')]

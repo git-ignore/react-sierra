@@ -1,39 +1,41 @@
 //  @flow
 
 import type {IconName} from './icons';
+import type {ThemeProps} from '../../styles';
 
 import React from 'react';
-import styled from 'styled-components';
+import styled, {withTheme} from 'styled-components';
 import {icons} from './icons';
-import {colors, baseTransition} from '../../styles';
+import defaultTheme from '../../styles';
 
 type Props = {
   name: IconName,
   size?: number,
-  color?: string
+  color?: string,
+  theme: ThemeProps
 };
 
 const Shape = styled.svg`
   display: inline-block;
-  transition: color ${baseTransition};
+  transition: color
+    ${({theme: {transitions}}: Props): string => transitions.base};
   vertical-align: middle;
 `;
 
-const Icon = ({
-  name,
-  size = 18,
-  color = colors.darkGray,
-  ...rest
-}: Props): React$Node => (
+const Icon = ({name, size = 18, color, ...rest}: Props): React$Node => (
   <Shape
     width={size}
     height={size}
     viewBox="0 0 1024 1024"
-    fill={color}
+    fill={color || rest.theme.colors.grayText}
     {...rest}
   >
     <path d={icons[name]} />
   </Shape>
 );
 
-export default Icon;
+Icon.defaultProps = {
+  theme: defaultTheme
+};
+
+export default withTheme(Icon);

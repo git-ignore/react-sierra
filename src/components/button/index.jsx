@@ -2,10 +2,12 @@
 
 import type {ShapeProps} from './shape';
 import type {IconName} from '../icon/icons';
-import Shape, {getButtonColor} from './shape';
 
 import React from 'react';
+import {withTheme} from 'styled-components';
 import Icon from './icon';
+import Shape, {getButtonColor} from './shape';
+import defaultTheme from '../../styles';
 
 type Props = ShapeProps & {
   children: React$Node,
@@ -23,11 +25,18 @@ const Button = ({
     {icon ? (
       <Icon
         name={icon}
-        color={getButtonColor(rest.appearance || Shape.defaultProps.appearance)}
+        color={getButtonColor(
+          rest.appearance || Shape.defaultProps.appearance,
+          rest.theme.colors
+        )}
       />
     ) : null}
     {children}
   </Shape>
 );
 
-export default Button;
+Button.defaultProps = {
+  theme: defaultTheme
+};
+
+export default withTheme(Button);

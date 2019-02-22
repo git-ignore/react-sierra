@@ -1,17 +1,24 @@
 // @flow
 
+import type {ThemeProps} from '../../styles';
+
 import {css} from 'styled-components';
-import {colors} from '../../styles';
 
 export type InputProps = {
-  invalid?: boolean
+  invalid?: boolean,
+  theme: ThemeProps
 };
 
-const withStatusStyles = ({invalid = false}: InputProps) => css`
+const withStatusStyles = ({
+  invalid = false,
+  theme: {colors}
+}: InputProps): Array<any> => css`
   border: 1px solid ${invalid ? 'red' : colors.grayLight};
 `;
 
-export const baseInputStyles = css`
+export const withBaseInputStyles = ({
+  theme: {colors}
+}: InputProps): Array<any> => css`
   padding: 6px 10px;
   background-color: #fff;
   border-radius: 4px;
