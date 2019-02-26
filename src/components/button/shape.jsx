@@ -7,8 +7,8 @@ type AppearanceType = 'primary' | 'secondary';
 
 export type ShapeProps = {
   appearance: AppearanceType,
-  disabled?: boolean,
-  theme: ThemeProps
+  theme: ThemeProps,
+  disabled: boolean
 };
 
 type Props = ShapeProps & {
@@ -20,49 +20,46 @@ export const getButtonTextColor = (
   colors: ColorsType
 ): string => (appearance === 'primary' ? '#FFF' : colors.grayText);
 
-const withTextColor = ({appearance, theme: {colors}}: Props) =>
-  css`
-    color: ${getButtonTextColor(appearance, colors)};
-  `;
-
-const withBgColor = ({appearance, theme: {colors}}: Props) => css`
-  background-color: ${appearance === 'primary'
-    ? colors.primary
-    : 'transparent'};
+const withTextColor = ({appearance, theme: {colors}}: Props): string => `
+  color: ${getButtonTextColor(appearance, colors)};
 `;
 
-const withBorderColor = ({appearance, theme: {colors}}: Props) =>
-  css`
-    border-color: ${appearance === 'primary'
-      ? colors.primary
-      : colors.grayLight};
-  `;
+const withBgColor = ({appearance, theme: {colors}}: Props): string => `
+  background-color: ${
+    appearance === 'primary' ? colors.primary : 'transparent'
+  };
+`;
 
-const withDisabledStyle = ({disabled}: Props) =>
+const withBorderColor = ({appearance, theme: {colors}}: Props): string => `
+  border-color: ${appearance === 'primary' ? colors.primary : colors.grayLight};
+`;
+
+const withDisabledStyle = ({disabled}: Props): string =>
   disabled
-    ? css`
+    ? `
         cursor: not-allowed;
         opacity: 0.7;
       `
-    : css`
+    : `
         cursor: pointer;
       `;
 
-const withHoverStyles = ({appearance, theme: {colors}}: Props) =>
+const withHoverStyles = ({appearance, theme: {colors}}: Props): string =>
   appearance === 'primary'
-    ? css`
+    ? `
         &:hover {
           background-color: ${colors.primaryDarken};
         }
       `
-    : css`
+    : `
         &:hover {
           border-color: ${colors.gray};
         }
       `;
 
-const withAppearanceStyles = ({disabled}: Props) => css`
-  ${withTextColor} 
+const withAppearanceStyles = ({disabled}: Props): Array<Function> =>
+  css`
+  ${withTextColor}
   ${withBgColor}
   ${withBorderColor}
   ${withDisabledStyle} 
@@ -98,10 +95,5 @@ const Shape = styled.button`
     transform: scale(0.98);
   }
 `;
-
-Shape.defaultProps = {
-  appearance: 'primary',
-  disabled: false
-};
 
 export default Shape;

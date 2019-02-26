@@ -3,9 +3,7 @@
 import styled from 'styled-components';
 import Icon from '../icon';
 
-const StyledIcon = styled(Icon).attrs({
-  size: 16
-})`
+const StyledIcon = styled(Icon)`
   margin-right: 10px;
 `;
 
