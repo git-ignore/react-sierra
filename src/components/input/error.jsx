@@ -8,6 +8,8 @@ type Props = {
 };
 
 const Error = styled.span`
+  position: absolute;
+  bottom: -${({theme: {offsets}}: Props): string => offsets.md};
   padding: 3px 10px;
   color: ${({theme: {colors}}: Props): string => colors.alert};
   font-size: 1.1rem;

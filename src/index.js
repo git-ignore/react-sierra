@@ -9,10 +9,13 @@ export {default as Button} from './components/button';
 export {default as Checkbox} from './components/checkbox';
 export {default as Heading} from './components/heading';
 export {default as Icon} from './components/icon';
+export {default as Input} from './components/input';
+export {default as InputGroup} from './components/input-group';
 export {default as GridRow} from './components/grid-row';
 export {default as GridCol} from './components/grid-col';
 export {default as GridContainer} from './components/grid-container';
 export {default as ThemeProvider} from './components/theme-provider';
+export {default as Textares} from './components/textarea';
 
 //others
 export {themeProps};

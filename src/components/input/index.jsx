@@ -16,17 +16,17 @@ type Props = InputProps & {
   }
 };
 
-const HTMLInput = styled.input`
-  height: 38px;
+export const HTMLInput = styled.input`
+  margin: 0;
   ${withBaseInputStyles};
 `;
 
 const Input = ({meta, ...rest}: Props) => (
-  <Container>
+  <Container {...rest}>
     <HTMLInput {...rest} invalid={meta && meta.error} />
-    {meta &&
-      meta.touched &&
-      meta.error && <Error theme={rest.theme}>{meta.error}</Error>}
+    {meta && meta.touched && meta.error && (
+      <Error theme={rest.theme}>{meta.error}</Error>
+    )}
   </Container>
 );
 

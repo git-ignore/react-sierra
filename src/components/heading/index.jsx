@@ -31,15 +31,19 @@ const sizePropsMapping = {
 };
 
 type Props = {
-  size: 'sm' | 'md' | 'lg'
+  size: 'sm' | 'md' | 'lg',
+  disableOffsets?: boolean
 };
 
 const withSizeStyles = ({size = 'md'}: Props) => sizePropsMapping[size];
 
+const withOffsets = ({disableOffsets = false}: Props): string =>
+  disableOffsets ? `margin: 0 auto;` : `margin-bottom: 2rem;`;
+
 const Heading = styled.div`
-  margin-bottom: 2rem;
   font-weight: 300;
   letter-spacing: -0.1rem;
+  ${withOffsets};
   ${withSizeStyles};
 `;
 

@@ -10,7 +10,7 @@ import Shape, {getButtonTextColor} from './shape';
 import defaultTheme from '../../styles';
 
 type Props = ShapeProps & {
-  children: React$Node,
+  children?: React$Node,
   onClick?: Function,
   icon?: IconName
 };
@@ -21,14 +21,16 @@ const Button = ({
   icon,
   ...rest
 }: Props): React$Node => (
-  <Shape {...rest} onClick={onClick} withIcon={!!icon}>
+  <Shape {...rest} onClick={onClick} withIcon={!!icon} hasChildren={!!children}>
     {icon ? (
       <Icon
         name={icon}
         color={getButtonTextColor(rest.appearance, rest.theme.colors)}
+        withoutOffset={!children}
+        theme={rest.theme}
       />
     ) : null}
-    {children}
+    {children && children}
   </Shape>
 );
 

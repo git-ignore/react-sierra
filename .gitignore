@@ -6,3 +6,4 @@ styleguide/index.html
 node_modules
 *.log
 deploy-docs.sh
+build-tmp.sh

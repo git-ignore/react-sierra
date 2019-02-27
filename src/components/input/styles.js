@@ -5,6 +5,7 @@ import type {ThemeProps} from '../../styles';
 import {css} from 'styled-components';
 
 export type InputProps = {
+  className?: string,
   invalid?: boolean,
   theme: ThemeProps
 };
@@ -17,9 +18,10 @@ const withStatusStyles = ({
 `;
 
 export const withBaseInputStyles = ({
-  theme: {colors}
+  theme: {colors, offsets}
 }: InputProps): Array<any> => css`
-  padding: 6px 10px;
+  padding: ${offsets.sm};
+  margin: 0;
   background-color: #fff;
   border-radius: 4px;
   box-shadow: none;
