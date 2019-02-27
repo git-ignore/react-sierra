@@ -26,13 +26,17 @@
 
 - [x] Table component
 
-- [ ] Form checkboxes
+- [x] Checkbox component
 
-- [ ] Form radio groups
+- [ ] Update sizing to 'rems'
+
+- [x] Radio-button component
+
+- [ ] Radio-button group component
+
+- [ ] Checkbox group component
 
 - [ ] Colors, offsets and screenSizes docs
-
-- [ ] Dark theme
 
 ...
 
