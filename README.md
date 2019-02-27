@@ -30,7 +30,7 @@
 
 - [ ] Update sizing to 'rems'
 
-- [x] Radio-button component
+- [ ] Radio-button component
 
 - [ ] Radio-button group component
 
