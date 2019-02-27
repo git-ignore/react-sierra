@@ -10,6 +10,13 @@
 
 ---
 
+## Installation
+```bash
+yarn add react-skeleton-ui-kit
+```
+
+---
+
 ## Roadmap
 
 - [x] Buttons
