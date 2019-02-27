@@ -12,6 +12,11 @@
 <Button appearance="secondary" disabled style={{margin: '10px'}} icon="download">Disabled</Button>
 ```
 
+```jsx
+<Button style={{margin: '10px'}} icon="download" />
+<Button appearance="secondary" style={{margin: '10px'}} icon="upload" />
+```
+
 ### Props
 
 | Prop name    |   Type   |      Default |                                Description |

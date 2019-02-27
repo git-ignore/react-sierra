@@ -12,7 +12,8 @@ export type ShapeProps = {
 };
 
 type Props = ShapeProps & {
-  withIcon: boolean
+  withIcon: boolean,
+  hasChildren: boolean
 };
 
 export const getButtonTextColor = (
@@ -66,14 +67,13 @@ const withAppearanceStyles = ({disabled}: Props): Array<Function> =>
   ${!disabled && withHoverStyles};
 `;
 
-const withPaddings = ({withIcon}: Props) =>
-  withIcon
-    ? css`
-        padding: 11px 30px 11px 25px;
-      `
-    : css`
-        padding: 11px 30px;
-      `;
+const withPaddings = ({withIcon, hasChildren}: Props): string => {
+  if (!withIcon) {
+    return `padding: 10px 30px;`;
+  }
+
+  return hasChildren ? `padding: 10px 30px 10px 25px;` : `padding: 10px 20px;`;
+};
 
 const Shape = styled.button`
   display: flex;

@@ -6,6 +6,7 @@ import GridDemo from './components/grid-demo';
 import {GridCol, GridRow} from '../src/index';
 import ThemeProvider from '../src/components/theme-provider';
 import Button from '../src/components/button';
+import Input from '../src/components/input';
 
 global.ThemeProvider = ThemeProvider;
 global.IconDemoCard = IconDemoCard;
@@ -14,3 +15,4 @@ global.DemoContainer = DemoContainer;
 global.GridCol = GridCol;
 global.GridRow = GridRow;
 global.GridDemo = GridDemo;
+global.Input = Input;
