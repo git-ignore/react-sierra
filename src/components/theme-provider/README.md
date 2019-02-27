@@ -20,8 +20,8 @@ _Also available for override (see example below):_
 ```js static
 {
   colors: {
-    primary: '#33C3F0',
-    primaryDarken: '#1EAEDB',
+    primary: '#33c3f0',
+    primaryDarken: '#1eaedb',
     grayLight: '#bbb',
     grayText: '#555',
     gray: '#888',

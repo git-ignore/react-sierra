@@ -10,12 +10,14 @@ const colors = Object.freeze({
 });
 
 const offsets = Object.freeze({
+  xs: '5px',
   sm: '10px',
   md: '20px',
   lg: '30px'
 });
 
 const transitions = Object.freeze({
+  fast: '.14s ease-in-out',
   base: '.2s ease-in-out'
 });
 
