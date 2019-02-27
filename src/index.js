@@ -1,6 +1,7 @@
 // @flow
 
 import * as themeProps from './styles';
+import * as styledHelpers from './styles/helpers';
 
 // components
 export {default as GlobalStyle} from './components/global-style';
@@ -15,3 +16,4 @@ export {default as ThemeProvider} from './components/theme-provider';
 
 //others
 export {themeProps};
+export {styledHelpers};
