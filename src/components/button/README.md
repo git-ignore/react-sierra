@@ -1,7 +1,7 @@
 ```jsx
 <Button appearance="primary" style={{margin: '10px'}}>Primary button</Button>
 <Button appearance="secondary" style={{margin: '10px'}}>Secondary button</Button>
-<Button appearance="primary" disabled style={{margin: '10px'}}>Primary disabled</Button>
+<Button disabled style={{margin: '10px'}}>Primary disabled</Button>
 <Button appearance="secondary" disabled style={{margin: '10px'}}>Secondary disabled</Button>
 ```
 

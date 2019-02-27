@@ -25,10 +25,7 @@ const Button = ({
     {icon ? (
       <Icon
         name={icon}
-        color={getButtonTextColor(
-          rest.appearance || Shape.defaultProps.appearance,
-          rest.theme.colors
-        )}
+        color={getButtonTextColor(rest.appearance, rest.theme.colors)}
       />
     ) : null}
     {children}
@@ -36,7 +33,9 @@ const Button = ({
 );
 
 Button.defaultProps = {
-  theme: defaultTheme
+  theme: defaultTheme,
+  appearance: 'primary',
+  disabled: false
 };
 
 export default withTheme(Button);

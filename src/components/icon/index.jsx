@@ -10,20 +10,20 @@ import defaultTheme from '../../styles';
 
 type Props = {
   name: IconName,
-  size?: number,
-  color?: string,
-  theme: ThemeProps
+  theme: ThemeProps,
+  size: number,
+  color?: string
 };
 
-const Shape = styled.svg`
+const SVG = styled.svg`
   display: inline-block;
   transition: color
     ${({theme: {transitions}}: Props): string => transitions.base};
   vertical-align: middle;
 `;
 
-const Icon = ({name, size = 18, color, ...rest}: Props): React$Node => (
-  <Shape
+const Icon = ({name, size, color, ...rest}: Props): React$Node => (
+  <SVG
     width={size}
     height={size}
     viewBox="0 0 1024 1024"
@@ -31,11 +31,12 @@ const Icon = ({name, size = 18, color, ...rest}: Props): React$Node => (
     {...rest}
   >
     <path d={icons[name]} />
-  </Shape>
+  </SVG>
 );
 
 Icon.defaultProps = {
-  theme: defaultTheme
+  theme: defaultTheme,
+  size: 18
 };
 
 export default withTheme(Icon);
