@@ -87,11 +87,6 @@ const verticallStyles = `
 const Wrapper = styled.div`
   display: flex;
 
-  & > *,
-  ${HTMLInput} {
-    height: 100%;
-  }
-
   & > *:not(:last-child):not(:first-child) {
     ${HTMLInput} {
       border-radius: 0;

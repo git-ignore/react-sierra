@@ -34,7 +34,7 @@ class InputGroupDemo extends React.PureComponent {
         <Input
           name="from"
           placeholder="From"
-          style={{width: '100px'}}
+          style={{width: '100px', margin: 0}}
           value={this.state.from}
           onChange={this.handleFromChange}
         />
@@ -42,7 +42,7 @@ class InputGroupDemo extends React.PureComponent {
         <Input
           name="to"
           placeholder="To"
-          style={{width: '100px'}}
+          style={{width: '100px', margin: 0}}
           value={this.state.to}
           onChange={this.handleToChange}
         />
